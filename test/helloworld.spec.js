@@ -21,6 +21,15 @@ describe('Dates test suite', () => {
         assert(dateTime.today().getTime() == checkDate.getTime(), 'Mocked date: ' + dateTime.today().getTime() + ' is not equal to: ' + checkDate.getTime());
     });
 
+    it('Should check "setYear(date, year)"', () => {
+        let mockInitDate = new Date('2019-01-01T12:34:56z');
+        let changedYear = 2021;
+        mockUtil.mockDate(mockInitDate, RealDate);
+        let dateToChange = new Date();
+
+        assert(dateTime.setYear(dateToChange, changedYear).getFullYear() == changedYear, 'Set year is not equal');
+    });
+
     afterEach(() => {
         global.Date = RealDate;
     })
