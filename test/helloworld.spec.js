@@ -30,6 +30,14 @@ describe('Dates test suite', () => {
         assert(dateTime.setYear(dateToChange, changedYear).getFullYear() == changedYear, 'Set year is not equal');
     });
 
+    it('Should check "daysDifference(dateLeft, dateRight)"', () => {
+        let dateLeft = new Date('2019-01-01T12:34:56z');
+        let dateRight = new Date('2019-01-19T12:34:56z');
+        let expectCountDays = 18;
+
+        assert(dateTime.daysDifference(dateLeft, dateRight) == expectCountDays, 'Count of days: ' + dateTime.daysDifference(dateLeft, dateRight) + ' differs from expected: ' + expectCountDays);
+    });
+
     afterEach(() => {
         global.Date = RealDate;
     })
