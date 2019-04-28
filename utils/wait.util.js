@@ -34,12 +34,12 @@ const doWait = (action, interval, expectedValue) => {
 
 class Wait {
 
-    forTrue(action, maxCount, interval, expectedValue, count = 0){
-        return retrier(action, maxCount, interval, expectedValue, count);
+    forTrue(action, maxCount, interval, expectedValue){
+        return retrier(action, maxCount, interval, expectedValue);
     }
 
-    forFalse(action, maxCount, interval, expectedValue, count = 0){
-        return retrier(action, maxCount, interval, expectedValue, count);
+    forFalse(action, maxCount, interval, expectedValue){
+        return retrier(action, maxCount, interval, expectedValue);
     }
 }
 
