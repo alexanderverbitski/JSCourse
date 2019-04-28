@@ -7,6 +7,7 @@ const mockUtil = require('../utils/mock.util');
 describe('Hello World Test Suite', () => {
     it('Should write "Hello World"', () => {
         logger.info('Hello World');
+        logger.warning();
     });
 });
 
