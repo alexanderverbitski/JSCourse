@@ -24,8 +24,7 @@ class Wait {
         }, 
         () => {
             if (maxCount <= count) {
-            logger.warning('Was not able to reach expected condition!');
-            logger.warning(`[${count}] action() output: ${action()}`);
+            logger.warning(`Was not able to reach expected condition! action() output: ${action()}`);
             return false;
         } else {
             return this.forTrue(action, maxCount, interval, expectedValue, count);
